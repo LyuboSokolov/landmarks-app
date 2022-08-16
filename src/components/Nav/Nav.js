@@ -1,6 +1,13 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import { useContext } from 'react';
+
+import { UserDataContext } from '../../context/UserData';
 
 export const Nav = () => {
+
+  const { user } = useContext(UserDataContext);
+
   return (
 
     <nav className="navbar" role="navigation">
@@ -20,7 +27,7 @@ export const Nav = () => {
           <div className="logo">
             <Link className="logo-wrap" to="/">
               <span><i className="fa-solid fa-person-hiking" /></span>
-              <span className ="titleLogo">Landmarks</span>
+              <span className="titleLogo">Landmarks</span>
             </Link>
           </div>
           {/* End Logo */}
@@ -39,27 +46,36 @@ export const Nav = () => {
                   Landmarks
                 </Link>
               </li>
-              <li className="js_nav-item nav-item">
-                <Link className="nav-item-child nav-item-hover" to="/add">
-                  Add Landmark
-                </Link>
-              </li> 
-              <li className="js_nav-item nav-item">
-                <Link className="nav-item-child nav-item-hover" to="/login">
-                  Login
-                </Link>
-              </li>
-              <li className="js_nav-item nav-item">
-                <a className="nav-item-child nav-item-hover" href="">
-                  Logout
-                </a>
-              </li>
-              <li className="js_nav-item nav-item">
-                <Link className="nav-item-child nav-item-hover" to="/register">
-                  Register
-                </Link>
-              </li>
-            
+
+              {user
+                ? <><li className="js_nav-item nav-item">
+                  <Link className="nav-item-child nav-item-hover" to="/add">
+                    Add Landmark
+                  </Link>
+                </li>
+                  <li className="js_nav-item nav-item">
+                    <a className="nav-item-child nav-item-hover" href="">
+                      Logout
+                    </a>
+                  </li>
+                </>
+                : <>
+                  <li className="js_nav-item nav-item">
+                    <Link className="nav-item-child nav-item-hover" to="/login">
+                      Login
+                    </Link>
+                  </li>
+
+                  <li className="js_nav-item nav-item">
+                    <Link className="nav-item-child nav-item-hover" to="/register">
+                      Register
+                    </Link>
+                  </li>
+                </>
+              }
+
+
+
             </ul>
           </div>
         </div>

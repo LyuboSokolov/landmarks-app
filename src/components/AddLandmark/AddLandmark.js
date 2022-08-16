@@ -1,9 +1,17 @@
 import { useState } from "react";
+import { useContext } from "react";
+
 import { useNavigate } from "react-router-dom";
+
+import { UserDataContext } from "../../context/UserData";
 
 import * as landmarkService from '../../services/landmarkService';
 
 export const AddLandmark = () => {
+
+    const {user} = useContext(UserDataContext);
+
+  
 
     const [values, setValues] = useState({
         title: '',
@@ -24,8 +32,8 @@ export const AddLandmark = () => {
     const submitHandler = (e) => {
         e.preventDefault();
         landmarkService.create(values);
-
-        navigate('/landmarks');
+console.log(user);
+       // navigate('/landmarks');
     }
     return (
         <div className="createTrip">

@@ -7,7 +7,7 @@ export const login = (loginData) => {
             "content-type": "application/json"
         },
         body: JSON.stringify(loginData)
-        
+
     })
-    .then (res => res.json());
+        .then(res => res.json());
 };

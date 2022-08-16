@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useContext } from "react";
 
-import { UserDataContext } from "../../App";
+import { UserDataContext } from "../../context/UserData";
 
 export const Login = () => {
     const { userLogin } = useContext(UserDataContext);
@@ -17,15 +17,23 @@ export const Login = () => {
 
         const loginData = Object.fromEntries(new FormData(e.target));
 
-
         authService.login(loginData)
             .then(userData => {
-                userLogin(userData);
-                navigate('/');
+                console.log(userData);
+                if (userData.code) {
+                    alert("Invalid email or password")
+                } else {
+                    userLogin(userData);
+                    localStorage.setItem("user", JSON.stringify(userData));
+                    navigate('/');
+                }
+
             });
 
-    }
 
+
+
+    }
     return (
         <div className="login">
             <form className="form-login" onSubmit={submitHandler}>

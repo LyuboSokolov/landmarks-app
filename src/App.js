@@ -1,9 +1,11 @@
 
 import './App.css';
 
-import { createContext } from 'react';
+import { useState } from 'react';
 
 import { Routes, Route } from 'react-router-dom';
+
+import { UserDataContext } from './context/UserData';
 
 import { Nav } from './components/Nav/Nav';
 import { Landmarks } from './components/Landmarks/Landmarks';
@@ -13,9 +15,8 @@ import { Login } from './components/Login/Login';
 import { AddLandmark } from './components/AddLandmark/AddLandmark';
 import { LandmarkDetails } from './components/LandmarkDetails/LandmarkDetails';
 import { Footer } from './components/Footer/Footer';
-import { useState } from 'react';
 
-export const UserDataContext = createContext();
+
 function App() {
 
     const [user, setUser] = useState();

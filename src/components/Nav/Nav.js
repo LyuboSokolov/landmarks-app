@@ -47,16 +47,17 @@ export const Nav = () => {
                 </Link>
               </li>
 
-              {user
-                ? <><li className="js_nav-item nav-item">
-                  <Link className="nav-item-child nav-item-hover" to="/add">
-                    Add Landmark
-                  </Link>
-                </li>
+              {user.email
+                ? <>
                   <li className="js_nav-item nav-item">
-                    <a className="nav-item-child nav-item-hover" href="">
+                    <Link className="nav-item-child nav-item-hover" to="/add">
+                      Add Landmark
+                    </Link>
+                  </li>
+                  <li className="js_nav-item nav-item">
+                    <Link className="nav-item-child nav-item-hover" to="/logout">
                       Logout
-                    </a>
+                    </Link>
                   </li>
                 </>
                 : <>

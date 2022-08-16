@@ -12,6 +12,7 @@ import { Landmarks } from './components/Landmarks/Landmarks';
 import { Home } from './components/Home/Home';
 import { Register } from './components/Register/Register';
 import { Login } from './components/Login/Login';
+import { Logout } from './components/Logout/Logout';
 import { AddLandmark } from './components/AddLandmark/AddLandmark';
 import { LandmarkDetails } from './components/LandmarkDetails/LandmarkDetails';
 import { Footer } from './components/Footer/Footer';
@@ -26,8 +27,11 @@ function App() {
         setUser(userData);
     }
 
+    const userLogout = () => {
+        setUser({});
+    }
     return (
-        <UserDataContext.Provider value={{ user, userLogin }}>
+        <UserDataContext.Provider value={{ user, userLogin, userLogout }}>
             <div className="App">
 
                 <header className="header navbar-fixed-top">
@@ -39,6 +43,7 @@ function App() {
                     <Route path='/landmarks' element={<Landmarks />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
+                    <Route path='/logout' element = {<Logout />} />
                     <Route path='/add' element={<AddLandmark />} />
                     <Route path='/landmarks/detail/:landmarkId' element={<LandmarkDetails />} />
                 </Routes>

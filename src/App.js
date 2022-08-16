@@ -1,5 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+import { createContext } from 'react';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -11,27 +13,38 @@ import { Login } from './components/Login/Login';
 import { AddLandmark } from './components/AddLandmark/AddLandmark';
 import { LandmarkDetails } from './components/LandmarkDetails/LandmarkDetails';
 import { Footer } from './components/Footer/Footer';
+import { useState } from 'react';
 
+export const UserDataContext = createContext();
 function App() {
+
+    const [user, setUser] = useState();
+
+
+    const userLogin = (userData) => {
+        setUser(userData);
+    }
+
     return (
-        <div className="App">
+        <UserDataContext.Provider value={{ user, userLogin }}>
+            <div className="App">
 
-            <header className="header navbar-fixed-top">
-                <Nav />
-            </header>
+                <header className="header navbar-fixed-top">
+                    <Nav />
+                </header>
 
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/landmarks' element={<Landmarks />} />
-                <Route path='/register' element={<Register />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/add' element={<AddLandmark />} />
-                <Route path='/landmarks/detail/:landmarkId' element={<LandmarkDetails />} />
-            </Routes>
-            
-            <Footer />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/landmarks' element={<Landmarks />} />
+                    <Route path='/register' element={<Register />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/add' element={<AddLandmark />} />
+                    <Route path='/landmarks/detail/:landmarkId' element={<LandmarkDetails />} />
+                </Routes>
 
-        </div>
+                <Footer />
+            </div>
+        </UserDataContext.Provider>
     );
 }
 

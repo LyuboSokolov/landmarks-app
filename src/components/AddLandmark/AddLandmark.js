@@ -25,7 +25,7 @@ export const AddLandmark = () => {
         e.preventDefault();
         landmarkService.create(values);
 
-        navigate('/trips');
+        navigate('/landmarks');
     }
     return (
         <div className="createTrip">

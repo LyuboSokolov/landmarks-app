@@ -5,8 +5,8 @@ export const getAll = () => {
         .then(res => res.json());
 }
 
-export const getOne = (tripId) => {
-    return fetch(`${baseUrl}/${tripId}`)
+export const getOne = (landmarkId) => {
+    return fetch(`${baseUrl}/${landmarkId}`)
         .then(res => res.json());
 }
 
@@ -19,4 +19,15 @@ export const create = (accessToken, data) => {
         },
         body: JSON.stringify(data)
     });
+}
+
+export const update = (landmarkId,accessToken,data) => {
+    fetch(`${baseUrl}/${landmarkId}`,{
+        method:"PUT",
+        headers:{
+            "X-Authorization": accessToken,
+            "content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
 }

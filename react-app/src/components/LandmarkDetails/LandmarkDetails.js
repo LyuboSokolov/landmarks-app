@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState, useContext } from "react";
+
+import { useParams, Link } from "react-router-dom";
+
 import * as landmarkService from '../../services/landmarkService';
+
+import { UserDataContext } from "../../context/UserData";
 
 export const LandmarkDetails = () => {
 
+    const { user } = useContext(UserDataContext);
     const { landmarkId } = useParams();
 
     const [landmark, setLandmark] = useState();
@@ -12,6 +17,7 @@ export const LandmarkDetails = () => {
         landmarkService.getOne(landmarkId)
             .then(result => {
                 setLandmark(result);
+                console.log(result);
             });
     }, []);
 
@@ -33,15 +39,20 @@ export const LandmarkDetails = () => {
                             {landmark?.description}
                         </p>
                     </div>
+                    {landmark?._ownerId == user?._id
+                        ? <>
+                            <div className="actionBtn">
+                                <Link to={`/landmarks/details/${landmark._id}/edit`} className="edit">
+                                    Edit
+                                </Link>
+                                <Link to={`/landmarks/${landmark._id}/delete`} className="remove">
+                                    Delete
+                                </Link>
+                            </div>
+                        </>
+                        : <></>
+                    }
 
-                    <div className="actionBtn">
-                        <a href="/albums/${album._id}/edit" className="edit">
-                            Edit
-                        </a>
-                        <a href="/albums/${album._id}/delete" className="remove">
-                            Delete
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>

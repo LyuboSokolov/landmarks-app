@@ -15,7 +15,7 @@ export const Landmark = ({
                 />
             </div>
             <h4>
-                <Link to={`/landmarks/detail/${landmark._id}`}>{landmark.title}</Link>
+                <Link to={`/landmarks/details/${landmark._id}`}>{landmark.title}</Link>
       
             </h4>
             <p>

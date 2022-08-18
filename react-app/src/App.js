@@ -16,6 +16,7 @@ import { Logout } from './components/Logout/Logout';
 import { AddLandmark } from './components/AddLandmark/AddLandmark';
 import { LandmarkDetails } from './components/LandmarkDetails/LandmarkDetails';
 import { Footer } from './components/Footer/Footer';
+import { Edit } from './components/Edit/Edit';
 
 
 function App() {
@@ -43,9 +44,10 @@ function App() {
                     <Route path='/landmarks' element={<Landmarks />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
-                    <Route path='/logout' element = {<Logout />} />
+                    <Route path='/logout' element={<Logout />} />
                     <Route path='/add' element={<AddLandmark />} />
-                    <Route path='/landmarks/detail/:landmarkId' element={<LandmarkDetails />} />
+                    <Route path='/landmarks/details/:landmarkId' element={<LandmarkDetails />} />
+                    <Route path='/landmarks/details/:landmarkId/edit' element={<Edit />} />
                 </Routes>
 
                 <Footer />

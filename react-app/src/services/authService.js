@@ -25,3 +25,19 @@ export const logout = async (accessToken) => {
         console.log(error);
     }
 };
+
+export const register = async (email, password) => {
+    try {
+      return await fetch(`${baseUrl}/register`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+        })
+            .then(res => res.json());
+    } catch (error) {
+        alert(error.message);
+    }
+
+}

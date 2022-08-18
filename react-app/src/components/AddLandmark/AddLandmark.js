@@ -9,9 +9,9 @@ import * as landmarkService from '../../services/landmarkService';
 
 export const AddLandmark = () => {
 
-    const {user} = useContext(UserDataContext);
+    const { user } = useContext(UserDataContext);
 
-  
+
 
     const [values, setValues] = useState({
         title: '',
@@ -31,9 +31,12 @@ export const AddLandmark = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        landmarkService.create(values);
-console.log(user);
-       // navigate('/landmarks');
+        landmarkService.create(user.accessToken, values)
+            .then(res => {
+                console.log(user);
+            });
+
+        navigate('/landmarks');
     }
     return (
         <div className="createTrip">
@@ -63,7 +66,7 @@ console.log(user);
                         type="text"
                         value={values.imgUrl}
                         onChange={changeHendler}
-                        name = "imgUrl"
+                        name="imgUrl"
                         placeholder=" "
                     />
                     <div className="cut cut-short" />
@@ -78,7 +81,7 @@ console.log(user);
                         type="text"
                         value={values.located}
                         onChange={changeHendler}
-                        name = "located"
+                        name="located"
                         placeholder=" "
                     />
                     <div className="cut cut-medium" />
@@ -92,9 +95,9 @@ console.log(user);
                         value={values.description}
                         onChange={changeHendler}
                         cols="39" rows="4"
-                        name = "description"
-                        placeholder=" " 
-                        />
+                        name="description"
+                        placeholder=" "
+                    />
                     <div className="cut" />
                     <label htmlFor="description" className="placeholder">
                         Description

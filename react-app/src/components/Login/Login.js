@@ -19,7 +19,7 @@ export const Login = () => {
 
         authService.login(loginData)
             .then(userData => {
-                console.log(userData);
+            
                 if (userData.code) {
                     alert("Invalid email or password")
                 } else {
@@ -29,9 +29,6 @@ export const Login = () => {
                 }
 
             });
-
-
-
 
     }
     return (

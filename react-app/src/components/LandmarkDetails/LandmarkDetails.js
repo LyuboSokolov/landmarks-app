@@ -12,7 +12,6 @@ export const LandmarkDetails = () => {
         landmarkService.getOne(landmarkId)
             .then(result => {
                 setLandmark(result);
-                console.log(result);
             });
     }, []);
 

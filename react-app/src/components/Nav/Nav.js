@@ -47,7 +47,7 @@ export const Nav = () => {
                 </Link>
               </li>
 
-              {user.email
+              {user?.email
                 ? <>
                   <li className="js_nav-item nav-item">
                     <Link className="nav-item-child nav-item-hover" to="/add">

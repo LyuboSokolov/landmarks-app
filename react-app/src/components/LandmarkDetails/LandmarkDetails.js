@@ -1,13 +1,14 @@
 import { useEffect, useState, useContext } from "react";
 
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 import * as landmarkService from '../../services/landmarkService';
 
 import { UserDataContext } from "../../context/UserData";
 
-export const LandmarkDetails = () => {
 
+export const LandmarkDetails = () => {
+    const navigate = useNavigate();
     const { user } = useContext(UserDataContext);
     const { landmarkId } = useParams();
 
@@ -20,6 +21,17 @@ export const LandmarkDetails = () => {
                 console.log(result);
             });
     }, []);
+
+    const Remove = (landmarkId) => {
+
+        let isExecuted = window.confirm('Do you want to delete ?');
+
+        if (isExecuted) {
+            landmarkService.remove(landmarkId, user.accessToken);
+            navigate('/landmarks');
+
+        }
+    }
 
     return (
         <section >
@@ -42,12 +54,12 @@ export const LandmarkDetails = () => {
                     {landmark?._ownerId == user?._id
                         ? <>
                             <div className="actionBtn">
-                                <Link to={`/landmarks/details/${landmark._id}/edit`} className="edit">
+                                <Link to={`/landmarks/details/${landmark?._id}/edit`} className="edit">
                                     Edit
                                 </Link>
-                                <Link to={`/landmarks/${landmark._id}/delete`} className="remove">
+                                <button onClick={() => Remove(landmarkId)} className="remove">
                                     Delete
-                                </Link>
+                                </button>
                             </div>
                         </>
                         : <></>
@@ -58,3 +70,4 @@ export const LandmarkDetails = () => {
         </section>
     );
 };
+

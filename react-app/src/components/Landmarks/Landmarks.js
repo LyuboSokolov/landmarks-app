@@ -9,6 +9,7 @@ export const Landmarks = () => {
         landmarkService.getAll()
             .then(result => {
                 setLandmarks(result);
+                console.log(typeof result);
             });
     }, []);
 

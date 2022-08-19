@@ -72,7 +72,8 @@
     bottom: 0;
 }
 
-.actionBtn>a {
+.actionBtn>a,
+button {
     width: 200%;
     height: 50px;
     cursor: pointer;
@@ -98,5 +99,8 @@
 }
 
 .actionBtn>a:hover {
+    background-position: right;
+}
+.actionBtn>button:hover {
     background-position: right;
 }

@@ -9,7 +9,7 @@ export const Landmark = ({
                 <img
                     className="img-responsive wow fadeIn"
                     src={landmark.imgUrl}
-                    alt="God's eyes cave"
+                    alt="picture"
                     data-wow-duration=".3"
                     data-wow-delay=".1s"
                 />

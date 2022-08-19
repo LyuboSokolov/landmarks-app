@@ -21,13 +21,23 @@ export const create = (accessToken, data) => {
     });
 }
 
-export const update = (landmarkId,accessToken,data) => {
-    fetch(`${baseUrl}/${landmarkId}`,{
-        method:"PUT",
-        headers:{
+export const update = (landmarkId, accessToken, data) => {
+    fetch(`${baseUrl}/${landmarkId}`, {
+        method: "PUT",
+        headers: {
             "X-Authorization": accessToken,
             "content-type": "application/json"
         },
         body: JSON.stringify(data)
+    })
+}
+
+
+export const remove = (landmarkId, accessToken) => {
+    fetch(`${baseUrl}/${landmarkId}`, {
+        method: "DELETE",
+        headers: {
+            "X-Authorization": accessToken,
+        }
     })
 }

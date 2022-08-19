@@ -18,7 +18,6 @@ import { LandmarkDetails } from './components/LandmarkDetails/LandmarkDetails';
 import { Footer } from './components/Footer/Footer';
 import { Edit } from './components/Edit/Edit';
 
-
 function App() {
 
     const [user, setUser] = useState();
@@ -48,6 +47,7 @@ function App() {
                     <Route path='/add' element={<AddLandmark />} />
                     <Route path='/landmarks/details/:landmarkId' element={<LandmarkDetails />} />
                     <Route path='/landmarks/details/:landmarkId/edit' element={<Edit />} />
+                   
                 </Routes>
 
                 <Footer />

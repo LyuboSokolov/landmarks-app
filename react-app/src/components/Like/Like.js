@@ -24,7 +24,6 @@ export const Like = (
 
     const likeHendler = (landmarkId, userId) => {
 
-
         if (!(likes.some(x => x.userLikeId === userId))) {
             likeServise.likePost(landmarkId, userId);
 

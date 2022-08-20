@@ -37,7 +37,7 @@ export const AddLandmark = () => {
         } else {
             landmarkService.create(user.accessToken, values)
                 .then(res => {
-                    console.log(user);
+                   
                 });
 
             navigate('/landmarks');

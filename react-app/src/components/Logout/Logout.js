@@ -9,7 +9,7 @@ import * as authService from "../../services/authService";
 export const Logout = () => {
     const navigate = useNavigate();
     const { user, userLogout } = useContext(UserDataContext);
-    console.log(user);
+   
     useEffect(() => {
         authService.logout(user.accessToken)
             .then(() => {

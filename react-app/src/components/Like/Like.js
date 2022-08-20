@@ -1,18 +1,13 @@
-
 import { useEffect, useState, useContext } from "react";
 
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-import * as landmarkService from '../../services/landmarkService';
 import * as likeServise from '../../services/likeService';
 import { UserDataContext } from "../../context/UserData";
-
-
 
 export const Like = (
     { landmark }
 ) => {
-
 
     const { user } = useContext(UserDataContext);
     const [likes, setLikes] = useState([]);
@@ -27,9 +22,6 @@ export const Like = (
             });
     }, [user]);
 
-
-
-
     const likeHendler = (landmarkId, userId) => {
 
 
@@ -40,19 +32,17 @@ export const Like = (
                 .then(res => {
                     setLikes(Object.values(res).filter(x => x.landmarkId === landmarkId));
                 });
-
         }
-
     }
     return (
-        <div>
+        <div className="like-wrapper">
             {user?._id !== landmark?._ownerId && user?._id
-                ? <button onClick={() => likeHendler(landmarkId, user?._id)}>
+                ? <button className="like-btn" onClick={() => likeHendler(landmarkId, user?._id)}>
                     <i className="fa-solid fa-thumbs-up"></i>
                 </button>
                 : <></>
             }
-            <span>{Object.values(likes).length}</span>
+            <span className="like">LIKES: {Object.values(likes).length}</span>
         </div>
     )
 }

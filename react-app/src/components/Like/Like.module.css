@@ -1,0 +1,13 @@
+.like-wrapper {
+    display: inline-block;
+
+}
+
+.like-btn  {
+    padding: 2px;
+    margin: 10px 5px;
+    width: 50px;
+}
+.like {
+    display: inline-block;
+}

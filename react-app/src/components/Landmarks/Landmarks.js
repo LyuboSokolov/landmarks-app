@@ -9,12 +9,11 @@ export const Landmarks = () => {
         landmarkService.getAll()
             .then(result => {
                 setLandmarks(result);
-                console.log(typeof result);
+
             });
     }, []);
-
+ 
     return (
-        /* Products */
         <div id="products">
             <div className="container content-lg">
                 <div className="row text-center margin-b-40">
@@ -27,20 +26,12 @@ export const Landmarks = () => {
                         </p>
                     </div>
                 </div>
-                {/*// end row */}
                 <div className="row">
                     {landmarks.map(x => <Landmark key={x._id} landmark={x} />)}
-                    {/* Latest Products */}
                     <div className="col-sm-4 sm-margin-b-50">
-
-
                     </div>
-                    {/* End Latest Products */}
                 </div>
-                {/*// end row */}
             </div>
-
         </div>
-        /* End Products */
     );
 }

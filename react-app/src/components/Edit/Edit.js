@@ -38,8 +38,11 @@ export const Edit = () => {
     const submitHandler = (e) => {
         e.preventDefault();
         landmarkService.update(landmarkId, user.accessToken, values);
+        landmarkService.getOne(landmarkId)
+            .then(res => {
+                navigate(`/landmarks/details/${landmarkId}`);
+            })
 
-        navigate(`/landmarks/details/${landmarkId}`);
     }
 
     return (

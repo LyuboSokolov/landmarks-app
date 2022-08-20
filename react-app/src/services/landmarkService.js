@@ -39,5 +39,5 @@ export const remove = (landmarkId, accessToken) => {
         headers: {
             "X-Authorization": accessToken,
         }
-    })
+    });
 }

@@ -29,7 +29,6 @@ export const LandmarkDetails = () => {
         if (isExecuted) {
             landmarkService.remove(landmarkId, user.accessToken);
             navigate('/landmarks');
-
         }
     }
 
@@ -45,7 +44,7 @@ export const LandmarkDetails = () => {
                             Title:{landmark?.title}
                         </h1>
                         <h3>
-                            Location:{landmark?.location}
+                            Location:{landmark?.located}
                         </h3>
                         <p>
                             {landmark?.description}

@@ -291,8 +291,8 @@ Fixed Top .navbar-fixed-top .navbar-collapse {
   height: 30px;
 }
 
-/* hover nav !!! */
-/* .header .nav-item-hover:after {
+hover nav
+ .header .nav-item-hover:after {
   position: absolute;
   top: 45px;
   left: 0;
@@ -304,7 +304,7 @@ Fixed Top .navbar-fixed-top .navbar-collapse {
   transition-duration: 400ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
-} */
+}
 
 
 @media (max-width: 991px) {

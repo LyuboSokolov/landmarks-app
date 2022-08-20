@@ -12,17 +12,16 @@ export const Landmarks = () => {
 
             });
     }, []);
- 
+
     return (
         <div id="products">
-            <div className="container content-lg">
+            <div className="container content-lg landmarks">
                 <div className="row text-center margin-b-40">
                     <div className="col-sm-6 col-sm-offset-3">
-                        <h2>Latest Products</h2>
+                        <h2>Amazing landmarks</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor
-                            incididunt ut laboret dolore magna aliqua enim minim veniam
-                            exercitation
+                            Bulgaria is a charming country, 
+                            full of beautiful landscapes and amazing beaches.
                         </p>
                     </div>
                 </div>

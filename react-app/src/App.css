@@ -2,3 +2,4 @@
 @import '../src/components/Login/Login.module.css';
 @import '../src/components/AddLandmark/AddLandmark.module.css';
 @import '../src/components/LandmarkDetails/LandmarkDetails.module.css';
+@import '../src/components/Landmarks/Landmarks.module.css';

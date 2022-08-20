@@ -44,7 +44,7 @@ export const Login = () => {
                     </label>
                 </div>
                 <div className="input-container ic2">
-                    <input id="password" name="password" className="input" type="text" placeholder=" " />
+                    <input id="password" name="password" className="input" type="password" placeholder=" " />
                     <div className="cut cut-medium" />
                     <label htmlFor="password" className="placeholder">
                         Password

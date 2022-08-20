@@ -17,7 +17,8 @@ export const AddLandmark = () => {
         title: '',
         imgUrl: '',
         located: '',
-        description: '',
+        description: ''
+
     });
 
     const changeHendler = (e) => {
@@ -31,12 +32,17 @@ export const AddLandmark = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        landmarkService.create(user.accessToken, values)
-            .then(res => {
-                console.log(user);
-            });
+        if (Object.values(values).some(x => x === '')) {
+            alert('Fill all fields!')
+        } else {
+            landmarkService.create(user.accessToken, values)
+                .then(res => {
+                    console.log(user);
+                });
 
-        navigate('/landmarks');
+            navigate('/landmarks');
+        }
+
     }
     return (
         <div className="createTrip">

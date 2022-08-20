@@ -32,19 +32,20 @@ export const Edit = () => {
             [e.target.name]: e.target.value
         }));
     };
-
     const navigate = useNavigate();
 
     const submitHandler = (e) => {
         e.preventDefault();
-        landmarkService.update(landmarkId, user.accessToken, values);
-        landmarkService.getOne(landmarkId)
-            .then(res => {
-                navigate(`/landmarks/details/${landmarkId}`);
-            })
-
+        if (Object.values(values).some(x => x === '')) {
+            alert('Fill all fields!')
+        } else {
+            landmarkService.update(landmarkId, user.accessToken, values);
+            landmarkService.getOne(landmarkId)
+                .then(res => {
+                    navigate(`/landmarks/details/${landmarkId}`);
+                })
+        }
     }
-
     return (
         <div className="createTrip">
             <form className="form-createTrip" onSubmit={submitHandler}>
@@ -59,9 +60,7 @@ export const Edit = () => {
                         onChange={changeHendler}
                         name="title"
                         placeholder=" "
-
                     />
-
                     <div className="cut cut-medium" />
                     <label htmlFor="title" className="placeholder">
                         Title

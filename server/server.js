@@ -1647,19 +1647,19 @@
         landmarks: {
             "280b4a1a-d0f3-4639-aa54-6d9158365152": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                title: "God's eyes cave",
+                title: "The Eyes of God",
                 imgUrl: "https://traveler-diary.com/content/uploads/2019/11/prohodna-cave-4.jpg",
-                location: "asdasd",
-                description: "God's eyes cave is a ..",
+                located: "Karlukovo",
+                description: "The ceiling of Prohodna Cave in northern Bulgaria affords a peek at the sky via two deity-sized-eye-shaped holes. ",
                 _id: "280b4a1a-d0f3-4639-aa54-6d9158365152"
             },
 
             "e797fa57-bf0a-4749-8028-72dba715e5f8": {
                 _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                title: "God's eyes cave 2",
-                imgUrl: "https://traveler-diary.com/content/uploads/2019/11/prohodna-cave-4.jpg",
-                location: "asdasd",
-                description: "God's eyes cave is a .asdasGod's eyes cave is a .asdasdsa as cave is a .asdasdsadadasdas",
+                title: "Belogradchik Rocks",
+                imgUrl: "https://freesofiatour.com/wp-content/uploads/2021/02/belogradchick-rocks-e1612861031735.jpg",
+                located: "Belogradchik",
+                description: "The rocks vary in color from primarily red to yellow. Some of the rocks reach up to 200 m in height. Many rocks have fantastic shapes and are associated with interesting legends.",
                 _id: "e797fa57-bf0a-4749-8028-72dba715e5f8"
             }
         }

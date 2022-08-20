@@ -7,30 +7,30 @@
     margin-bottom: 200px;
 }
 
-.albumCover {
+.landmarkCover {
     float: left;
     height: 100%;
     width: auto;
     margin-right: 20px;
 }
 
-.albumCover img {
-    border-radius: 12px 0 0 7px;
+.landmarkCover img {
+    border-radius: 7px 0 0 7px;
     height: 100%;
 }
 
-.albumText {
+.landmarkText {
     padding-left: 10px;
     padding-top: 20px;
 }
 
-.albumText h1 {
+.landmarkText h1 {
     color: gainsboro;
     font-weight: bolder;
     font-size: 28px;
 }
 
-.albumText h3 {
+.landmarkText h3 {
     margin: 8px 0 47px 18px;
     font-size: 18px;
     color: gray;
@@ -38,20 +38,20 @@
     margin-bottom: 0;
 }
 
-.albumText h4 {
+.landmarkText h4 {
     margin: 8px 0 10px 18px;
     font-size: 16px;
     color: #9F9991;
     letter-spacing: 0.2em;
 }
 
-.albumText h5 {
+.landmarkText h5 {
     margin: 8px 0 10px 14px;
     font-size: 16px;
     color: white;
 }
 
-.albumText>p {
+.landmarkText>p {
     display: inline-block;
     height: auto;
     width: 30%;
@@ -82,7 +82,7 @@ button {
     display: inline;
     align-items: center;
     justify-content: center;
-    background-color: #1b2845;
+    background-color: #0d324d;
     background-image: linear-gradient(315deg, #45a29e 0%, #0d324d 74%);
     background-size: 200% 100%;
     background-position: left;

@@ -4,10 +4,10 @@ export const Landmark = ({
     landmark
 }) => {
     return (
-        <div className="col-sm-4 sm-margin-b-50">
-            <div className="margin-b-20">
+        <div className="landmark-item col-sm-4 sm-margin-b-50">
+            <div className="landmark-container-img margin-b-20">
                 <img
-                    className="img-responsive wow fadeIn"
+                    className="landmark-img img-responsive wow fadeIn"
                     src={landmark.imgUrl}
                     alt="picture"
                     data-wow-duration=".3"

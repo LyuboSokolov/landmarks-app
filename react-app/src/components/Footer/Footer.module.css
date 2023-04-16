@@ -1,0 +1,19 @@
+.footer {
+  position: absolute;
+  bottom: 0px;
+  color: #81848f;
+  z-index: 20;
+  width: 100%;
+  padding-top: ;
+}
+
+.footer .content {
+  width: 100%;
+  padding-top: 6px;
+
+}
+
+.footer .row {
+  display: flex;
+
+}

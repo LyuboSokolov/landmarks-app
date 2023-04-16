@@ -9,7 +9,7 @@ export const Footer = () => {
                     </div>
                     <div className="col-xs-6 text-right">
                         <p className="margin-b-0">
-                            &copy; 2022 All Rights Reserved.
+                            &copy; 2023 All Rights Reserved.
                         </p>
                     </div>
                 </div>

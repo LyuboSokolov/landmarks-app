@@ -4,13 +4,13 @@
 
 #container-landmarks {
     display: flex;
-    max-width: 90%;
+    max-width: 100%;
     flex-wrap: wrap;
 }
 
 .landmark-item {
     width: 33%;
-
+margin-bottom: 44px;
 
 }
 

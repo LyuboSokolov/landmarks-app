@@ -17,6 +17,7 @@ import { AddLandmark } from './components/AddLandmark/AddLandmark';
 import { LandmarkDetails } from './components/LandmarkDetails/LandmarkDetails';
 import { Footer } from './components/Footer/Footer';
 import { Edit } from './components/Edit/Edit';
+import { PrivateRoute } from './components/common/PrivateRoute';
 
 function App() {
 
@@ -43,11 +44,11 @@ function App() {
                     <Route path='/landmarks' element={<Landmarks />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
-                    <Route path='/logout' element={<Logout />} />
-                    <Route path='/add' element={<AddLandmark />} />
+                    <Route path='/logout' element={<PrivateRoute><Logout /></PrivateRoute>} />
+                    <Route path='/add' element={<PrivateRoute><AddLandmark /></PrivateRoute>} />
                     <Route path='/landmarks/details/:landmarkId' element={<LandmarkDetails />} />
-                    <Route path='/landmarks/details/:landmarkId/edit' element={<Edit />} />
-                   
+                    <Route path='/landmarks/details/:landmarkId/edit' element={<PrivateRoute><Edit /></PrivateRoute>} />
+
                 </Routes>
 
                 <Footer />

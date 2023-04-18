@@ -8,8 +8,20 @@ export const likePost = (landmarkId, userLikeId) => {
     });
 };
 
+export const dislikePost = (likeId, accessToken) => {
+    fetch(`${baseUrl}/${likeId}`, {
+        method: "DELETE",
+        headers: {
+            "X-Authorization": accessToken,
+        }
+    })
+};
+
 export const getAllLikes = () => {
     return fetch(baseUrl)
         .then(res => res.json()
         );
 };
+
+
+

@@ -14,7 +14,7 @@ export const Landmarks = () => {
     }, []);
 
     return (
-        <div id="products1">
+        <div >
             <div className="container content-lg landmarks">
                 <div className="row text-center margin-b-40">
                     <div className="col-sm-6 col-sm-offset-3">

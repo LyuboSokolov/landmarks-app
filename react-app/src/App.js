@@ -17,6 +17,7 @@ import { AddLandmark } from './components/AddLandmark/AddLandmark';
 import { LandmarkDetails } from './components/LandmarkDetails/LandmarkDetails';
 import { Footer } from './components/Footer/Footer';
 import { Edit } from './components/Edit/Edit';
+
 import { PrivateRoute } from './components/common/PrivateRoute';
 import { PublicRoute } from './components/common/PublicRoute';
 

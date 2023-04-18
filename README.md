@@ -24,7 +24,7 @@ Navigate yourself to the server and client folder in 2 different terminals.
 <h3>Landmarks</h3>
 <li>List of landmarks</li>
 <h3>Landmarks Details</h3>
-<li>More detailed description and possibility to edit/delete and like.</li>
+<li>More detailed description and possibility to edit/delete and like/dislike.</li>
 <h3>Add landmark</h3>
 <li>Possibility to create a post if you are a registered user.</li>
 </ul>

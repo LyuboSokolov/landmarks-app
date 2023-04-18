@@ -17,6 +17,7 @@
 .landmarkCover img {
     border-radius: 7px 0 0 7px;
     height: 100%;
+    max-width: 600px;
 }
 
 .landmarkText {

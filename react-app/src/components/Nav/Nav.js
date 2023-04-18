@@ -74,9 +74,6 @@ export const Nav = () => {
                   </li>
                 </>
               }
-
-
-
             </ul>
           </div>
         </div>

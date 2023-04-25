@@ -1,6 +1,4 @@
-html {
-  overflow-x: hidden;
-}
+
 
 html,
 html a,
@@ -161,6 +159,7 @@ fieldset[disabled] .btn-theme {
   background-size: cover;
   background-position: center center;
   padding: 250px 0 200px;
+  height: 100vh;
 }
 
 .promo-block:before {

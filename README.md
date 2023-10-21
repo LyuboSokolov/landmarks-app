@@ -1,5 +1,5 @@
 <h1>Landmarks-APP</h1>
-<span>The Landmarks application was created as part of my defense of the course React.js.</span>
+<span>The Landmarks application was created as part of my defense of the course React.js.The app is for sharing landmarks. After registration, you can add a landmark, like or dislike already published landmarks. Used technologies JavaScript, ReactJS and HTML & CSS.</span>
 <h2>Start APP</h2>
 Make sure you have installed Node.js on your mashine.
 
